@@ -2,7 +2,7 @@
   "name": "fsd-imports-highlight",
   "displayName": "fsd-imports-highlight",
   "description": "Highlight layers/slice/etc of imports in FSD styles",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "nord-clan",
   "icon": "icon.png",
   "license": "-",
@@ -16,9 +16,9 @@
   },
   "repository": {
 		"type": "git",
-		"url": "http://gitlab.nordclan/ivan.kornilov/fsd-imports-highlight"
+		"url": "https://github.com/nord-clan/fsd-imports-highlight"
 	},
-  "bugs": "http://gitlab.nordclan/ivan.kornilov/fsd-imports-highlight/issues",
+  "bugs": "https://github.com/nord-clan/fsd-imports-highlight/issues",
   "categories": [
     "Visualization"
   ],
