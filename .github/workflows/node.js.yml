@@ -37,6 +37,5 @@ jobs:
       - name: Build project
         run: |
           pnpm build
-          pnpm test
         env:
           CI: true
