@@ -1,7 +1,8 @@
 # FSD imports highlight
 
-if you want the folder to be highlighted, specify it in `fsd-imports-highlight.layers`.
+![image](https://user-images.githubusercontent.com/102309602/228155867-748ad5dd-5bbf-43cb-8465-1627a68377ba.png)
 
+if you want the folder to be highlighted, specify it in `fsd-imports-highlight.layers`.
 example:  
 ```json
 "fsd-imports-highlight.layers": {
