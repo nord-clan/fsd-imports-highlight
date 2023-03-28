@@ -1,0 +1,138 @@
+{
+  "name": "fsd-imports-highlight",
+  "displayName": "fsd-imports-highlight",
+  "description": "Highlight layers/slice/etc of imports in FSD styles",
+  "version": "0.0.2",
+  "publisher": "nord-clan",
+  "icon": "icon.png",
+  "license": "-",
+  "author": {
+    "name": "Ivan Kornilov",
+    "email": "ivan.kornilov@nordclan.com",
+    "url": "https://t.me/xsolncu"
+  },
+  "engines": {
+    "vscode": "^1.76.0"
+  },
+  "repository": {
+		"type": "git",
+		"url": "http://gitlab.nordclan/ivan.kornilov/fsd-imports-highlight"
+	},
+  "bugs": "http://gitlab.nordclan/ivan.kornilov/fsd-imports-highlight/issues",
+  "categories": [
+    "Visualization"
+  ],
+  "galleryBanner": {
+		"color": "#e3f4ff",
+		"theme": "light"
+	},
+  "extensionKind": [
+		"ui",
+		"workspace"
+	],
+  "activationEvents": [
+    "onStartupFinished",
+    "onCommand:fsd-imports-highlight.toggle"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "FSD imports highlight",
+      "properties": {
+        "fsd-imports-highlight.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Controls all decorations and features (except commands)."
+        },
+        "fsd-imports-highlight.layers": {
+          "type": "object",
+          "description": "Folder which are used to color.",
+          "default": {
+            "app": {
+              "color": "#ADB9E3",
+              "backgroundColor": "#4B4353",
+              "border": "1px solid #8189A5",
+              "folders": [
+                "providers",
+                "routing",
+                "store",
+                "styles"
+              ]
+            },
+            "processes": {
+              "color": "#ADB9E3",
+              "backgroundColor": "#4B4353",
+              "border": "1px solid #8189A5",
+              "folders": []
+            },
+            "pages": {
+              "color": "#ADB9E3",
+              "backgroundColor": "#4B4353",
+              "border": "1px solid #8189A5",
+              "folders": []
+            },
+            "widgets": {
+              "color": "#ADB9E3",
+              "backgroundColor": "#4B4353",
+              "border": "1px solid #8189A5",
+              "folders": []
+            },
+            "features": {
+              "color": "#ADB9E3",
+              "backgroundColor": "#4B4353",
+              "border": "1px solid #8189A5",
+              "folders": []
+            },
+            "entities": {
+              "color": "#ADB9E3",
+              "backgroundColor": "#4B4353",
+              "border": "1px solid #8189A5",
+              "folders": []
+            },
+            "shared": {
+              "color": "#9AD5CA",
+              "backgroundColor": "#475654",
+              "border": "1px solid #576F6B",
+              "folders": [
+                "api",
+                "config",
+                "layouts",
+                "types",
+                "ui",
+                "utils"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "fsd-imports-highlight.toggle",
+        "title": "Toggle (Enable/Disable) Everything",
+        "description": "Toggle (Enable/Disable) Everything (toggle global setting `fsd-imports-highlight.enabled`)",
+        "category": "FSD imports highlight"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "pnpm run compile && pnpm run lint",
+    "lint": "eslint src --ext ts",
+    "format": "prettier -w \"./**/*.{ts,tsx,json,scss,md}\""
+  },
+  "devDependencies": {
+    "@types/glob": "^8.1.0",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.76.0",
+    "@typescript-eslint/eslint-plugin": "^5.56.0",
+    "@typescript-eslint/parser": "^5.56.0",
+    "@vscode/test-electron": "^2.3.0",
+    "eslint": "^8.36.0",
+    "glob": "^8.1.0",
+    "prettier": "^2.8.7",
+    "typescript": "^4.9.5"
+  }
+}
